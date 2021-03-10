@@ -1,0 +1,1351 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: C:\Users\Chiara2\Documents\DocumentiCondivisi\ES1_project\proj_bram\m3_for_arty_a7\Build_Keil\Objects\m3_for_arty_a7.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x00000175
+    Flags: EF_ARM_HASENTRY + EF_ARM_ABI_FLOAT_SOFT (0x05000202)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Conforms to Soft float procedure-call standard
+
+    Built with
+    Component: ARM Compiler 5.06 update 7 (build 960) Tool: armasm [4d35fa]
+    Component: ARM Compiler 5.06 update 7 (build 960) Tool: armlink [4d3601]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 1
+    Section header entries: 16
+
+    Program header offset: 46604 (0x0000b60c)
+    Section header offset: 46636 (0x0000b62c)
+
+    Section header string table index: 15
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 5820 bytes (1612 bytes in file)
+    Virtual address: 0x00000000 (Alignment 8)
+
+
+========================================================================
+
+** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 1580 bytes (alignment 4)
+    Address: 0x00000000
+
+    $d.realdata
+    RESET
+    __Vectors
+        0x00000000:    20001090    ...     DCD    536875152
+        0x00000004:    00000175    u...    DCD    373
+        0x00000008:    0000017d    }...    DCD    381
+        0x0000000c:    0000017f    ....    DCD    383
+        0x00000010:    00000181    ....    DCD    385
+        0x00000014:    00000183    ....    DCD    387
+        0x00000018:    00000185    ....    DCD    389
+        0x0000001c:    00000055    U...    DCD    85
+        0x00000020:    00000000    ....    DCD    0
+        0x00000024:    00000000    ....    DCD    0
+        0x00000028:    00000000    ....    DCD    0
+        0x0000002c:    00000187    ....    DCD    391
+        0x00000030:    00000189    ....    DCD    393
+        0x00000034:    00000000    ....    DCD    0
+        0x00000038:    0000018b    ....    DCD    395
+        0x0000003c:    0000018d    ....    DCD    397
+        0x00000040:    0000018f    ....    DCD    399
+        0x00000044:    0000018f    ....    DCD    399
+        0x00000048:    0000018f    ....    DCD    399
+        0x0000004c:    0000018f    ....    DCD    399
+        0x00000050:    0000018f    ....    DCD    399
+        0x00000054:    0000018f    ....    DCD    399
+        0x00000058:    0000018f    ....    DCD    399
+        0x0000005c:    0000018f    ....    DCD    399
+        0x00000060:    0000018f    ....    DCD    399
+        0x00000064:    0000018f    ....    DCD    399
+        0x00000068:    0000018f    ....    DCD    399
+        0x0000006c:    0000018f    ....    DCD    399
+        0x00000070:    0000018f    ....    DCD    399
+        0x00000074:    0000018f    ....    DCD    399
+        0x00000078:    0000018f    ....    DCD    399
+        0x0000007c:    0000018f    ....    DCD    399
+        0x00000080:    0000018f    ....    DCD    399
+        0x00000084:    0000018f    ....    DCD    399
+        0x00000088:    0000018f    ....    DCD    399
+        0x0000008c:    0000018f    ....    DCD    399
+        0x00000090:    0000018f    ....    DCD    399
+        0x00000094:    0000018f    ....    DCD    399
+        0x00000098:    0000018f    ....    DCD    399
+        0x0000009c:    0000018f    ....    DCD    399
+        0x000000a0:    0000018f    ....    DCD    399
+        0x000000a4:    0000018f    ....    DCD    399
+        0x000000a8:    0000018f    ....    DCD    399
+        0x000000ac:    0000018f    ....    DCD    399
+        0x000000b0:    0000018f    ....    DCD    399
+        0x000000b4:    0000018f    ....    DCD    399
+        0x000000b8:    0000018f    ....    DCD    399
+        0x000000bc:    0000018f    ....    DCD    399
+    $t
+    !!!main
+    __Vectors_End
+    __main
+        0x000000c0:    f000f802    ....    BL       __scatterload ; 0xc8
+        0x000000c4:    f000f83a    ..:.    BL       __rt_entry ; 0x13c
+    !!!scatter
+    __scatterload
+    __scatterload_rt2
+    __scatterload_rt2_thumb_only
+        0x000000c8:    a00a        ..      ADR      r0,{pc}+0x2c ; 0xf4
+        0x000000ca:    e8900c00    ....    LDM      r0,{r10,r11}
+        0x000000ce:    4482        .D      ADD      r10,r10,r0
+        0x000000d0:    4483        .D      ADD      r11,r11,r0
+        0x000000d2:    f1aa0701    ....    SUB      r7,r10,#1
+    __scatterload_null
+        0x000000d6:    45da        .E      CMP      r10,r11
+        0x000000d8:    d101        ..      BNE      0xde ; __scatterload_null + 8
+        0x000000da:    f000f82f    ../.    BL       __rt_entry ; 0x13c
+        0x000000de:    f2af0e09    ....    ADR      lr,{pc}-7 ; 0xd7
+        0x000000e2:    e8ba000f    ....    LDM      r10!,{r0-r3}
+        0x000000e6:    f0130f01    ....    TST      r3,#1
+        0x000000ea:    bf18        ..      IT       NE
+        0x000000ec:    1afb        ..      SUBNE    r3,r7,r3
+        0x000000ee:    f0430301    C...    ORR      r3,r3,#1
+        0x000000f2:    4718        .G      BX       r3
+    $d
+        0x000000f4:    00000518    ....    DCD    1304
+        0x000000f8:    00000538    8...    DCD    1336
+    $t
+    !!handler_copy
+    __scatterload_copy
+        0x000000fc:    3a10        .:      SUBS     r2,r2,#0x10
+        0x000000fe:    bf24        $.      ITT      CS
+        0x00000100:    c878        x.      LDMCS    r0!,{r3-r6}
+        0x00000102:    c178        x.      STMCS    r1!,{r3-r6}
+        0x00000104:    d8fa        ..      BHI      __scatterload_copy ; 0xfc
+        0x00000106:    0752        R.      LSLS     r2,r2,#29
+        0x00000108:    bf24        $.      ITT      CS
+        0x0000010a:    c830        0.      LDMCS    r0!,{r4,r5}
+        0x0000010c:    c130        0.      STMCS    r1!,{r4,r5}
+        0x0000010e:    bf44        D.      ITT      MI
+        0x00000110:    6804        .h      LDRMI    r4,[r0,#0]
+        0x00000112:    600c        .`      STRMI    r4,[r1,#0]
+        0x00000114:    4770        pG      BX       lr
+        0x00000116:    0000        ..      MOVS     r0,r0
+    !!handler_zi
+    __scatterload_zeroinit
+        0x00000118:    2300        .#      MOVS     r3,#0
+        0x0000011a:    2400        .$      MOVS     r4,#0
+        0x0000011c:    2500        .%      MOVS     r5,#0
+        0x0000011e:    2600        .&      MOVS     r6,#0
+        0x00000120:    3a10        .:      SUBS     r2,r2,#0x10
+        0x00000122:    bf28        (.      IT       CS
+        0x00000124:    c178        x.      STMCS    r1!,{r3-r6}
+        0x00000126:    d8fb        ..      BHI      0x120 ; __scatterload_zeroinit + 8
+        0x00000128:    0752        R.      LSLS     r2,r2,#29
+        0x0000012a:    bf28        (.      IT       CS
+        0x0000012c:    c130        0.      STMCS    r1!,{r4,r5}
+        0x0000012e:    bf48        H.      IT       MI
+        0x00000130:    600b        .`      STRMI    r3,[r1,#0]
+        0x00000132:    4770        pG      BX       lr
+    .ARM.Collect$$libinit$$00000000
+    __rt_lib_init
+        0x00000134:    b51f        ..      PUSH     {r0-r4,lr}
+    .ARM.Collect$$libinit$$00000002
+    .ARM.Collect$$libinit$$00000004
+    .ARM.Collect$$libinit$$0000000A
+    .ARM.Collect$$libinit$$0000000C
+    .ARM.Collect$$libinit$$0000000E
+    .ARM.Collect$$libinit$$00000011
+    .ARM.Collect$$libinit$$00000013
+    .ARM.Collect$$libinit$$00000015
+    .ARM.Collect$$libinit$$00000017
+    .ARM.Collect$$libinit$$00000019
+    .ARM.Collect$$libinit$$0000001B
+    .ARM.Collect$$libinit$$0000001D
+    .ARM.Collect$$libinit$$0000001F
+    .ARM.Collect$$libinit$$00000021
+    .ARM.Collect$$libinit$$00000023
+    .ARM.Collect$$libinit$$00000025
+    .ARM.Collect$$libinit$$0000002C
+    .ARM.Collect$$libinit$$0000002E
+    .ARM.Collect$$libinit$$00000030
+    .ARM.Collect$$libinit$$00000032
+    .ARM.Collect$$libinit$$00000033
+    __rt_lib_init_alloca_1
+    __rt_lib_init_argv_1
+    __rt_lib_init_atexit_1
+    __rt_lib_init_clock_1
+    __rt_lib_init_cpp_1
+    __rt_lib_init_exceptions_1
+    __rt_lib_init_fp_1
+    __rt_lib_init_fp_trap_1
+    __rt_lib_init_getenv_1
+    __rt_lib_init_heap_1
+    __rt_lib_init_lc_collate_1
+    __rt_lib_init_lc_ctype_1
+    __rt_lib_init_lc_monetary_1
+    __rt_lib_init_lc_numeric_1
+    __rt_lib_init_lc_time_1
+    __rt_lib_init_preinit_1
+    __rt_lib_init_rand_1
+    __rt_lib_init_return
+    __rt_lib_init_signal_1
+    __rt_lib_init_stdio_1
+    __rt_lib_init_user_alloc_1
+        0x00000136:    bd1f        ..      POP      {r0-r4,pc}
+    .ARM.Collect$$libshutdown$$00000000
+    __rt_lib_shutdown
+        0x00000138:    b510        ..      PUSH     {r4,lr}
+    .ARM.Collect$$libshutdown$$00000002
+    .ARM.Collect$$libshutdown$$00000004
+    .ARM.Collect$$libshutdown$$00000006
+    .ARM.Collect$$libshutdown$$00000009
+    .ARM.Collect$$libshutdown$$0000000C
+    .ARM.Collect$$libshutdown$$0000000E
+    .ARM.Collect$$libshutdown$$00000011
+    .ARM.Collect$$libshutdown$$00000012
+    __rt_lib_shutdown_cpp_1
+    __rt_lib_shutdown_fini_1
+    __rt_lib_shutdown_fp_trap_1
+    __rt_lib_shutdown_heap_1
+    __rt_lib_shutdown_return
+    __rt_lib_shutdown_signal_1
+    __rt_lib_shutdown_stdio_1
+    __rt_lib_shutdown_user_alloc_1
+        0x0000013a:    bd10        ..      POP      {r4,pc}
+    .ARM.Collect$$rtentry$$00000000
+    .ARM.Collect$$rtentry$$00000002
+    .ARM.Collect$$rtentry$$00000004
+    __rt_entry
+    __rt_entry_presh_1
+    __rt_entry_sh
+        0x0000013c:    f000f9db    ....    BL       __user_setup_stackheap ; 0x4f6
+        0x00000140:    4611        .F      MOV      r1,r2
+    .ARM.Collect$$rtentry$$00000009
+    .ARM.Collect$$rtentry$$0000000A
+    __rt_entry_li
+    __rt_entry_postsh_1
+        0x00000142:    f7fffff7    ....    BL       __rt_lib_init ; 0x134
+    .ARM.Collect$$rtentry$$0000000C
+    .ARM.Collect$$rtentry$$0000000D
+    __rt_entry_main
+    __rt_entry_postli_1
+        0x00000146:    f000f84f    ..O.    BL       main ; 0x1e8
+        0x0000014a:    f000f9f9    ....    BL       exit ; 0x540
+    .ARM.Collect$$rtexit$$00000000
+    __rt_exit
+        0x0000014e:    b403        ..      PUSH     {r0,r1}
+    .ARM.Collect$$rtexit$$00000002
+    .ARM.Collect$$rtexit$$00000003
+    __rt_exit_ls
+    __rt_exit_prels_1
+        0x00000150:    f7fffff2    ....    BL       __rt_lib_shutdown ; 0x138
+    .ARM.Collect$$rtexit$$00000004
+    __rt_exit_exit
+        0x00000154:    bc03        ..      POP      {r0,r1}
+        0x00000156:    f000fa01    ....    BL       _sys_exit ; 0x55c
+        0x0000015a:    0000        ..      MOVS     r0,r0
+    .text
+    SystemCoreClockUpdate
+;;;70       SystemCoreClock = __SYSTEM_CLOCK;
+        0x0000015c:    4803        .H      LDR      r0,[pc,#12] ; [0x16c] = 0x17d7840
+        0x0000015e:    4904        .I      LDR      r1,[pc,#16] ; [0x170] = 0x20000000
+        0x00000160:    6008        .`      STR      r0,[r1,#0]
+;;;71     
+;;;72     }
+        0x00000162:    4770        pG      BX       lr
+    SystemInit
+;;;73     
+;;;74     /**
+;;;75      * Initialize the system
+;;;76      *
+;;;77      * @param  none
+;;;78      * @return none
+;;;79      *
+;;;80      * @brief  Setup the microcontroller system.
+;;;81      *         Initialize the System.
+;;;82      */
+;;;83     void SystemInit (void)
+;;;84     {
+;;;85     
+;;;86     #ifdef UNALIGNED_SUPPORT_DISABLE
+;;;87       SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+;;;88     #endif
+;;;89     
+;;;90       SystemCoreClock = __SYSTEM_CLOCK;
+        0x00000164:    4801        .H      LDR      r0,[pc,#4] ; [0x16c] = 0x17d7840
+        0x00000166:    4902        .I      LDR      r1,[pc,#8] ; [0x170] = 0x20000000
+        0x00000168:    6008        .`      STR      r0,[r1,#0]
+;;;91     
+;;;92     }
+        0x0000016a:    4770        pG      BX       lr
+    $d
+        0x0000016c:    017d7840    @x}.    DCD    25000000
+        0x00000170:    20000000    ...     DCD    536870912
+    $t
+    .text
+    Reset_Handler
+;;; ..\cmsis\Device\Source\ARTY_CM3\ARM\startup_ARTY_CM3.s
+;;;126                    LDR     R0, =SystemInit
+        0x00000174:    4809        .H      LDR      r0,[pc,#36] ; [0x19c] = 0x165
+;;;127                    BLX     R0
+        0x00000176:    4780        .G      BLX      r0
+;;;128                    LDR     R0, =__main
+        0x00000178:    4809        .H      LDR      r0,[pc,#36] ; [0x1a0] = 0xc1
+;;;129                    BX      R0
+        0x0000017a:    4700        .G      BX       r0
+    NMI_Handler
+;;;130                    ENDP
+;;;131    
+;;;132    
+;;;133    ; Dummy Exception Handlers (infinite loops which can be modified)
+;;;134    
+;;;135    NMI_Handler     PROC
+;;;136                    EXPORT  NMI_Handler               [WEAK]
+;;;137                    B       .
+        0x0000017c:    e7fe        ..      B        NMI_Handler ; 0x17c
+    HardFault_Handler
+;;;138                    ENDP
+;;;139    HardFault_Handler\
+;;;140                    PROC
+;;;141                    EXPORT  HardFault_Handler         [WEAK]
+;;;142                    B       .
+        0x0000017e:    e7fe        ..      B        HardFault_Handler ; 0x17e
+    MemManage_Handler
+;;;143                    ENDP
+;;;144    MemManage_Handler\
+;;;145                    PROC
+;;;146                    EXPORT  MemManage_Handler         [WEAK]
+;;;147                    B       .
+        0x00000180:    e7fe        ..      B        MemManage_Handler ; 0x180
+    BusFault_Handler
+;;;148                    ENDP
+;;;149    BusFault_Handler\
+;;;150                    PROC
+;;;151                    EXPORT  BusFault_Handler          [WEAK]
+;;;152                    B       .
+        0x00000182:    e7fe        ..      B        BusFault_Handler ; 0x182
+    UsageFault_Handler
+;;;153                    ENDP
+;;;154    UsageFault_Handler\
+;;;155                    PROC
+;;;156                    EXPORT  UsageFault_Handler        [WEAK]
+;;;157                    B       .
+        0x00000184:    e7fe        ..      B        UsageFault_Handler ; 0x184
+    SVC_Handler
+;;;158                    ENDP
+;;;159    SVC_Handler     PROC
+;;;160                    EXPORT  SVC_Handler               [WEAK]
+;;;161                    B       .
+        0x00000186:    e7fe        ..      B        SVC_Handler ; 0x186
+    DebugMon_Handler
+;;;162                    ENDP
+;;;163    DebugMon_Handler\
+;;;164                    PROC
+;;;165                    EXPORT  DebugMon_Handler          [WEAK]
+;;;166                    B       .
+        0x00000188:    e7fe        ..      B        DebugMon_Handler ; 0x188
+    PendSV_Handler
+;;;167                    ENDP
+;;;168    PendSV_Handler\
+;;;169                    PROC
+;;;170                    EXPORT  PendSV_Handler            [WEAK]
+;;;171                    B       .
+        0x0000018a:    e7fe        ..      B        PendSV_Handler ; 0x18a
+    SysTick_Handler
+;;;172                    ENDP
+;;;173    SysTick_Handler\
+;;;174                    PROC
+;;;175                    EXPORT  SysTick_Handler           [WEAK]
+;;;176                    B       .
+        0x0000018c:    e7fe        ..      B        SysTick_Handler ; 0x18c
+    DAPLinkFittedn
+    DAP_QSPI0_Handler
+    DAP_QSPI_XIP_Handler
+    DAP_SPI0_Handler
+    GPIO0_Handler
+    GPIO1_Handler
+    QSPI0_Handler
+    UART0_Handler
+    Unused_IRQ10
+    Unused_IRQ11
+    Unused_IRQ12
+    Unused_IRQ13
+    Unused_IRQ14
+    Unused_IRQ15
+    Unused_IRQ16
+    Unused_IRQ17
+    Unused_IRQ18
+    Unused_IRQ19
+    Unused_IRQ20
+    Unused_IRQ21
+    Unused_IRQ22
+    Unused_IRQ23
+    Unused_IRQ24
+    Unused_IRQ25
+    Unused_IRQ26
+    Unused_IRQ27
+    Unused_IRQ28
+    Unused_IRQ29
+    Unused_IRQ30
+    Unused_IRQ31
+    Unused_IRQ8
+    Unused_IRQ9
+;;;177                    ENDP
+;;;178    
+;;;179    Default_Handler PROC
+;;;180                    EXPORT UART0_Handler              [WEAK]
+;;;181                    EXPORT GPIO0_Handler              [WEAK]
+;;;182                    EXPORT GPIO1_Handler              [WEAK]
+;;;183                    EXPORT QSPI0_Handler              [WEAK]
+;;;184                    EXPORT DAP_QSPI0_Handler          [WEAK]
+;;;185                    EXPORT DAP_SPI0_Handler           [WEAK]
+;;;186                    EXPORT DAP_QSPI_XIP_Handler       [WEAK]
+;;;187                    EXPORT DAPLinkFittedn             [WEAK]
+;;;188                    EXPORT Unused_IRQ8                [WEAK]
+;;;189                    EXPORT Unused_IRQ9                [WEAK]
+;;;190                    EXPORT Unused_IRQ10               [WEAK]
+;;;191                    EXPORT Unused_IRQ11               [WEAK]
+;;;192                    EXPORT Unused_IRQ12               [WEAK]
+;;;193                    EXPORT Unused_IRQ13               [WEAK]
+;;;194                    EXPORT Unused_IRQ14               [WEAK]
+;;;195                    EXPORT Unused_IRQ15               [WEAK]
+;;;196                    EXPORT Unused_IRQ16               [WEAK]
+;;;197                    EXPORT Unused_IRQ17               [WEAK]
+;;;198                    EXPORT Unused_IRQ18               [WEAK]
+;;;199                    EXPORT Unused_IRQ19               [WEAK]
+;;;200                    EXPORT Unused_IRQ20               [WEAK]
+;;;201                    EXPORT Unused_IRQ21               [WEAK]
+;;;202                    EXPORT Unused_IRQ22               [WEAK]
+;;;203                    EXPORT Unused_IRQ23               [WEAK]
+;;;204                    EXPORT Unused_IRQ24               [WEAK]
+;;;205                    EXPORT Unused_IRQ25               [WEAK]
+;;;206                    EXPORT Unused_IRQ26               [WEAK]
+;;;207                    EXPORT Unused_IRQ27               [WEAK]
+;;;208                    EXPORT Unused_IRQ28               [WEAK]
+;;;209                    EXPORT Unused_IRQ29               [WEAK]
+;;;210                    EXPORT Unused_IRQ30               [WEAK]
+;;;211                    EXPORT Unused_IRQ31               [WEAK]
+;;;212    
+;;;213    UART0_Handler
+;;;214    GPIO0_Handler
+;;;215    GPIO1_Handler
+;;;216    QSPI0_Handler 
+;;;217    DAP_QSPI0_Handler 
+;;;218    DAP_SPI0_Handler  
+;;;219    DAP_QSPI_XIP_Handler 
+;;;220    DAPLinkFittedn   
+;;;221    Unused_IRQ8   
+;;;222    Unused_IRQ9   
+;;;223    Unused_IRQ10  
+;;;224    Unused_IRQ11  
+;;;225    Unused_IRQ12  
+;;;226    Unused_IRQ13  
+;;;227    Unused_IRQ14  
+;;;228    Unused_IRQ15  
+;;;229    Unused_IRQ16  
+;;;230    Unused_IRQ17  
+;;;231    Unused_IRQ18  
+;;;232    Unused_IRQ19  
+;;;233    Unused_IRQ20  
+;;;234    Unused_IRQ21  
+;;;235    Unused_IRQ22  
+;;;236    Unused_IRQ23  
+;;;237    Unused_IRQ24  
+;;;238    Unused_IRQ25  
+;;;239    Unused_IRQ26  
+;;;240    Unused_IRQ27  
+;;;241    Unused_IRQ28  
+;;;242    Unused_IRQ29  
+;;;243    Unused_IRQ30  
+;;;244    Unused_IRQ31  
+;;;245                    B       .
+        0x0000018e:    e7fe        ..      B        DAPLinkFittedn ; 0x18e
+    __user_initial_stackheap
+;;;246    
+;;;247                    ENDP
+;;;248    
+;;;249    
+;;;250                    ALIGN
+;;;251    
+;;;252    
+;;;253    ; User Initial Stack & Heap
+;;;254    
+;;;255                    IF      :DEF:__MICROLIB
+;;;256    
+;;;257                    EXPORT  __initial_sp
+;;;258                    EXPORT  __heap_base
+;;;259                    EXPORT  __heap_limit
+;;;260    
+;;;261                    ELSE
+;;;262    
+;;;263                    IMPORT  __use_two_region_memory
+;;;264                    EXPORT  __user_initial_stackheap
+;;;265    
+;;;266    __user_initial_stackheap PROC
+;;;267                    LDR     R0, =  Heap_Mem
+        0x00000190:    4804        .H      LDR      r0,[pc,#16] ; [0x1a4] = 0x20000090
+;;;268                    LDR     R1, =(Stack_Mem + Stack_Size)
+        0x00000192:    4905        .I      LDR      r1,[pc,#20] ; [0x1a8] = 0x20001090
+;;;269                    LDR     R2, = (Heap_Mem +  Heap_Size)
+        0x00000194:    4a05        .J      LDR      r2,[pc,#20] ; [0x1ac] = 0x20000c90
+;;;270                    LDR     R3, = Stack_Mem
+        0x00000196:    4b06        .K      LDR      r3,[pc,#24] ; [0x1b0] = 0x20000c90
+;;;271                    BX      LR
+        0x00000198:    4770        pG      BX       lr
+    $d
+        0x0000019a:    0000        ..      DCW    0
+        0x0000019c:    00000165    e...    DCD    357
+        0x000001a0:    000000c1    ....    DCD    193
+        0x000001a4:    20000090    ...     DCD    536871056
+        0x000001a8:    20001090    ...     DCD    536875152
+        0x000001ac:    20000c90    ...     DCD    536874128
+        0x000001b0:    20000c90    ...     DCD    536874128
+    $t
+    .text
+    Xil_Assert
+;;; ..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\standalone_v6_7\src\xil_assert.c
+;;;99     {
+        0x000001b4:    b570        p.      PUSH     {r4-r6,lr}
+        0x000001b6:    4604        .F      MOV      r4,r0
+        0x000001b8:    460d        .F      MOV      r5,r1
+;;;100    	/* if the callback has been set then invoke it */
+;;;101    	if (Xil_AssertCallbackRoutine != 0) {
+        0x000001ba:    4809        .H      LDR      r0,[pc,#36] ; [0x1e0] = 0x2000000c
+        0x000001bc:    6800        .h      LDR      r0,[r0,#0]
+        0x000001be:    b120         .      CBZ      r0,0x1ca ; Xil_Assert + 22
+;;;102    		(*Xil_AssertCallbackRoutine)(File, Line);
+        0x000001c0:    4629        )F      MOV      r1,r5
+        0x000001c2:    4620         F      MOV      r0,r4
+        0x000001c4:    4a06        .J      LDR      r2,[pc,#24] ; [0x1e0] = 0x2000000c
+        0x000001c6:    6812        .h      LDR      r2,[r2,#0]
+        0x000001c8:    4790        .G      BLX      r2
+;;;103    	}
+;;;104    
+;;;105    	/* if specified, wait indefinitely such that the assert will show up
+;;;106    	 * in testing
+;;;107    	 */
+;;;108    	while (Xil_AssertWait != 0) {
+        0x000001ca:    bf00        ..      NOP      
+        0x000001cc:    4805        .H      LDR      r0,[pc,#20] ; [0x1e4] = 0x20000008
+        0x000001ce:    6800        .h      LDR      r0,[r0,#0]
+        0x000001d0:    2800        .(      CMP      r0,#0
+        0x000001d2:    d1fb        ..      BNE      0x1cc ; Xil_Assert + 24
+;;;109    	}
+;;;110    }
+        0x000001d4:    bd70        p.      POP      {r4-r6,pc}
+    Xil_AssertSetCallback
+;;;111    
+;;;112    /*****************************************************************************/
+;;;113    /**
+;;;114    *
+;;;115    * @brief    Set up a callback function to be invoked when an assert occurs.
+;;;116    *           If a callback is already installed, then it will be replaced.
+;;;117    *
+;;;118    * @param    routine: callback to be invoked when an assert is taken
+;;;119    *
+;;;120    * @return   None.
+;;;121    *
+;;;122    * @note     This function has no effect if NDEBUG is set
+;;;123    *
+;;;124    ******************************************************************************/
+;;;125    void Xil_AssertSetCallback(Xil_AssertCallback Routine)
+;;;126    {
+;;;127    	Xil_AssertCallbackRoutine = Routine;
+        0x000001d6:    4902        .I      LDR      r1,[pc,#8] ; [0x1e0] = 0x2000000c
+        0x000001d8:    6008        .`      STR      r0,[r1,#0]
+;;;128    }
+        0x000001da:    4770        pG      BX       lr
+    XNullHandler
+;;;129    
+;;;130    /*****************************************************************************/
+;;;131    /**
+;;;132    *
+;;;133    * @brief    Null handler function. This follows the XInterruptHandler
+;;;134    *           signature for interrupt handlers. It can be used to assign a null
+;;;135    *           handler (a stub) to an interrupt controller vector table.
+;;;136    *
+;;;137    * @param    NullParameter: arbitrary void pointer and not used.
+;;;138    *
+;;;139    * @return   None.
+;;;140    *
+;;;141    * @note     None.
+;;;142    *
+;;;143    ******************************************************************************/
+;;;144    void XNullHandler(void *NullParameter)
+;;;145    {
+;;;146    	(void) NullParameter;
+;;;147    }
+        0x000001dc:    4770        pG      BX       lr
+    $d
+        0x000001de:    0000        ..      DCW    0
+        0x000001e0:    2000000c    ...     DCD    536870924
+        0x000001e4:    20000008    ...     DCD    536870920
+    $t
+    .text
+    main
+;;; ..\main\main.c
+;;;40         InitialiseGPIO();
+        0x000001e8:    f000f804    ....    BL       InitialiseGPIO ; 0x1f4
+;;;41     
+;;;42         // Main loop.  Handle LEDs and switches via interrupt
+;;;43         while ( 1 )
+        0x000001ec:    e001        ..      B        0x1f2 ; main + 10
+        0x000001ee:    f000f817    ....    BL       blink ; 0x220
+        0x000001f2:    e7fc        ..      B        0x1ee ; main + 6
+    .text
+    InitialiseGPIO
+;;; ..\gpio\gpio.c
+;;;39     {
+        0x000001f4:    b510        ..      PUSH     {r4,lr}
+;;;40         // Define local variables
+;;;41         int status;
+;;;42         /*
+;;;43          * Initialize the GPIO driver so that it's ready to use,
+;;;44          * specify the device ID that is generated in xparameters.h
+;;;45         */
+;;;46         status = XGpio_Initialize(&Gpio_Led_DIPSw, XPAR_AXI_GPIO_0_DEVICE_ID);
+        0x000001f6:    2100        .!      MOVS     r1,#0
+        0x000001f8:    480f        .H      LDR      r0,[pc,#60] ; [0x238] = 0x20000020
+        0x000001fa:    f000f952    ..R.    BL       XGpio_Initialize ; 0x4a2
+        0x000001fe:    4604        .F      MOV      r4,r0
+;;;47         if (status != XST_SUCCESS)  {
+        0x00000200:    b10c        ..      CBZ      r4,0x206 ; InitialiseGPIO + 18
+;;;48             return XST_FAILURE;
+        0x00000202:    2001        .       MOVS     r0,#1
+        0x00000204:    bd10        ..      POP      {r4,pc}
+;;;49         }
+;;;50         // GPIO0
+;;;51         // Port0 drives led_4bits. 
+;;;52         XGpio_SetDataDirection(&Gpio_Led_DIPSw, ARTY_A7_LED_CHANNEL, 0xFFFFFFF0);
+        0x00000206:    f06f020f    o...    MVN      r2,#0xf
+        0x0000020a:    2101        .!      MOVS     r1,#1
+        0x0000020c:    480a        .H      LDR      r0,[pc,#40] ; [0x238] = 0x20000020
+        0x0000020e:    f000f831    ..1.    BL       XGpio_SetDataDirection ; 0x274
+;;;53     //    ARTY_A7_GPIO0->TRI0 = 0xfffffff0;
+;;;54     
+;;;55         // Default value of LEDs
+;;;56         XGpio_DiscreteWrite(&Gpio_Led_DIPSw, ARTY_A7_LED_CHANNEL, 0x1);
+        0x00000212:    2201        ."      MOVS     r2,#1
+        0x00000214:    4611        .F      MOV      r1,r2
+        0x00000216:    4808        .H      LDR      r0,[pc,#32] ; [0x238] = 0x20000020
+        0x00000218:    f000f8e9    ....    BL       XGpio_DiscreteWrite ; 0x3ee
+;;;57     //    ARTY_A7_GPIO1->DATA0 = 0x1;
+;;;58         return XST_SUCCESS;
+        0x0000021c:    2000        .       MOVS     r0,#0
+        0x0000021e:    e7f1        ..      B        0x204 ; InitialiseGPIO + 16
+    blink
+;;;59     }
+;;;60     
+;;;61     void blink(void)
+;;;62     {
+        0x00000220:    b510        ..      PUSH     {r4,lr}
+;;;63          //volatile int i;
+;;;64          XGpio_DiscreteWrite(&Gpio_Led_DIPSw, ARTY_A7_LED_CHANNEL, 0xf);
+        0x00000222:    220f        ."      MOVS     r2,#0xf
+        0x00000224:    2101        .!      MOVS     r1,#1
+        0x00000226:    4804        .H      LDR      r0,[pc,#16] ; [0x238] = 0x20000020
+        0x00000228:    f000f8e1    ....    BL       XGpio_DiscreteWrite ; 0x3ee
+;;;65          //for(i = 0; i < 10000; i++); // delay
+;;;66          XGpio_DiscreteWrite(&Gpio_Led_DIPSw, ARTY_A7_LED_CHANNEL, 0);
+        0x0000022c:    2200        ."      MOVS     r2,#0
+        0x0000022e:    2101        .!      MOVS     r1,#1
+        0x00000230:    4801        .H      LDR      r0,[pc,#4] ; [0x238] = 0x20000020
+        0x00000232:    f000f8dc    ....    BL       XGpio_DiscreteWrite ; 0x3ee
+;;;67          //for(i = 0; i < 10000; i++);
+;;;68     }
+        0x00000236:    bd10        ..      POP      {r4,pc}
+    $d
+        0x00000238:    20000020     ..     DCD    536870944
+    $t
+    .text
+    XGpio_CfgInitialize
+;;; ..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio.c
+;;;119    {
+        0x0000023c:    b570        p.      PUSH     {r4-r6,lr}
+        0x0000023e:    4604        .F      MOV      r4,r0
+        0x00000240:    460d        .F      MOV      r5,r1
+        0x00000242:    4616        .F      MOV      r6,r2
+;;;120    	/* Assert arguments */
+;;;121    	Xil_AssertNonvoid(InstancePtr != NULL);
+        0x00000244:    b11c        ..      CBZ      r4,0x24e ; XGpio_CfgInitialize + 18
+        0x00000246:    2000        .       MOVS     r0,#0
+        0x00000248:    498a        .I      LDR      r1,[pc,#552] ; [0x474] = 0x20000004
+        0x0000024a:    6008        .`      STR      r0,[r1,#0]
+        0x0000024c:    e008        ..      B        0x260 ; XGpio_CfgInitialize + 36
+        0x0000024e:    2179        y!      MOVS     r1,#0x79
+        0x00000250:    4889        .H      LDR      r0,[pc,#548] ; [0x478] = 0x56c
+        0x00000252:    f7ffffaf    ....    BL       Xil_Assert ; 0x1b4
+        0x00000256:    2001        .       MOVS     r0,#1
+        0x00000258:    4986        .I      LDR      r1,[pc,#536] ; [0x474] = 0x20000004
+        0x0000025a:    6008        .`      STR      r0,[r1,#0]
+        0x0000025c:    2000        .       MOVS     r0,#0
+        0x0000025e:    bd70        p.      POP      {r4-r6,pc}
+;;;122    
+;;;123    	/* Set some default values. */
+;;;124    	InstancePtr->BaseAddress = EffectiveAddr;
+        0x00000260:    6026        &`      STR      r6,[r4,#0]
+;;;125    
+;;;126    	InstancePtr->InterruptPresent = Config->InterruptPresent;
+        0x00000262:    68a8        .h      LDR      r0,[r5,#8]
+        0x00000264:    60a0        .`      STR      r0,[r4,#8]
+;;;127    	InstancePtr->IsDual = Config->IsDual;
+        0x00000266:    68e8        .h      LDR      r0,[r5,#0xc]
+        0x00000268:    60e0        .`      STR      r0,[r4,#0xc]
+;;;128    
+;;;129    	/*
+;;;130    	 * Indicate the instance is now ready to use, initialized without error
+;;;131    	 */
+;;;132    	InstancePtr->IsReady = XIL_COMPONENT_IS_READY;
+        0x0000026a:    f04f3011    O..0    MOV      r0,#0x11111111
+        0x0000026e:    6060        ``      STR      r0,[r4,#4]
+;;;133    	return (XST_SUCCESS);
+        0x00000270:    2000        .       MOVS     r0,#0
+        0x00000272:    e7f4        ..      B        0x25e ; XGpio_CfgInitialize + 34
+    XGpio_SetDataDirection
+;;;134    }
+;;;135    
+;;;136    
+;;;137    /****************************************************************************/
+;;;138    /**
+;;;139    * Set the input/output direction of all discrete signals for the specified
+;;;140    * GPIO channel.
+;;;141    *
+;;;142    * @param	InstancePtr is a pointer to an XGpio instance to be worked on.
+;;;143    * @param	Channel contains the channel of the GPIO (1 or 2) to operate on.
+;;;144    * @param	DirectionMask is a bitmask specifying which discretes are input
+;;;145    *		and which are output. Bits set to 0 are output and bits set to 1
+;;;146    *		are input.
+;;;147    *
+;;;148    * @return	None.
+;;;149    *
+;;;150    * @note		The hardware must be built for dual channels if this function
+;;;151    *		is used with any channel other than 1.  If it is not, this
+;;;152    *		function will assert.
+;;;153    *
+;;;154    *****************************************************************************/
+;;;155    void XGpio_SetDataDirection(XGpio *InstancePtr, unsigned Channel,
+;;;156    			    u32 DirectionMask)
+;;;157    {
+        0x00000274:    b570        p.      PUSH     {r4-r6,lr}
+        0x00000276:    4604        .F      MOV      r4,r0
+        0x00000278:    460d        .F      MOV      r5,r1
+        0x0000027a:    4616        .F      MOV      r6,r2
+;;;158    	Xil_AssertVoid(InstancePtr != NULL);
+        0x0000027c:    b11c        ..      CBZ      r4,0x286 ; XGpio_SetDataDirection + 18
+        0x0000027e:    2000        .       MOVS     r0,#0
+        0x00000280:    497c        |I      LDR      r1,[pc,#496] ; [0x474] = 0x20000004
+        0x00000282:    6008        .`      STR      r0,[r1,#0]
+        0x00000284:    e007        ..      B        0x296 ; XGpio_SetDataDirection + 34
+        0x00000286:    219e        .!      MOVS     r1,#0x9e
+        0x00000288:    487b        {H      LDR      r0,[pc,#492] ; [0x478] = 0x56c
+        0x0000028a:    f7ffff93    ....    BL       Xil_Assert ; 0x1b4
+        0x0000028e:    2001        .       MOVS     r0,#1
+        0x00000290:    4978        xI      LDR      r1,[pc,#480] ; [0x474] = 0x20000004
+        0x00000292:    6008        .`      STR      r0,[r1,#0]
+        0x00000294:    bd70        p.      POP      {r4-r6,pc}
+;;;159    	Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+        0x00000296:    6860        `h      LDR      r0,[r4,#4]
+        0x00000298:    f1b03f11    ...?    CMP      r0,#0x11111111
+        0x0000029c:    d103        ..      BNE      0x2a6 ; XGpio_SetDataDirection + 50
+        0x0000029e:    2000        .       MOVS     r0,#0
+        0x000002a0:    4974        tI      LDR      r1,[pc,#464] ; [0x474] = 0x20000004
+        0x000002a2:    6008        .`      STR      r0,[r1,#0]
+        0x000002a4:    e007        ..      B        0x2b6 ; XGpio_SetDataDirection + 66
+        0x000002a6:    219f        .!      MOVS     r1,#0x9f
+        0x000002a8:    4873        sH      LDR      r0,[pc,#460] ; [0x478] = 0x56c
+        0x000002aa:    f7ffff83    ....    BL       Xil_Assert ; 0x1b4
+        0x000002ae:    2001        .       MOVS     r0,#1
+        0x000002b0:    4970        pI      LDR      r1,[pc,#448] ; [0x474] = 0x20000004
+        0x000002b2:    6008        .`      STR      r0,[r1,#0]
+        0x000002b4:    e7ee        ..      B        0x294 ; XGpio_SetDataDirection + 32
+;;;160    	Xil_AssertVoid((Channel == 1) ||
+        0x000002b6:    2d01        .-      CMP      r5,#1
+        0x000002b8:    d004        ..      BEQ      0x2c4 ; XGpio_SetDataDirection + 80
+        0x000002ba:    2d02        .-      CMP      r5,#2
+        0x000002bc:    d106        ..      BNE      0x2cc ; XGpio_SetDataDirection + 88
+        0x000002be:    68e0        .h      LDR      r0,[r4,#0xc]
+        0x000002c0:    2801        .(      CMP      r0,#1
+        0x000002c2:    d103        ..      BNE      0x2cc ; XGpio_SetDataDirection + 88
+        0x000002c4:    2000        .       MOVS     r0,#0
+        0x000002c6:    496b        kI      LDR      r1,[pc,#428] ; [0x474] = 0x20000004
+        0x000002c8:    6008        .`      STR      r0,[r1,#0]
+        0x000002ca:    e007        ..      B        0x2dc ; XGpio_SetDataDirection + 104
+        0x000002cc:    21a0        .!      MOVS     r1,#0xa0
+        0x000002ce:    486a        jH      LDR      r0,[pc,#424] ; [0x478] = 0x56c
+        0x000002d0:    f7ffff70    ..p.    BL       Xil_Assert ; 0x1b4
+        0x000002d4:    2001        .       MOVS     r0,#1
+        0x000002d6:    4967        gI      LDR      r1,[pc,#412] ; [0x474] = 0x20000004
+        0x000002d8:    6008        .`      STR      r0,[r1,#0]
+        0x000002da:    e7db        ..      B        0x294 ; XGpio_SetDataDirection + 32
+;;;161    		     ((Channel == 2) && (InstancePtr->IsDual == TRUE)));
+;;;162    
+;;;163    	XGpio_WriteReg(InstancePtr->BaseAddress,
+        0x000002dc:    1e69        i.      SUBS     r1,r5,#1
+        0x000002de:    2304        .#      MOVS     r3,#4
+        0x000002e0:    eb0301c1    ....    ADD      r1,r3,r1,LSL #3
+        0x000002e4:    6822        "h      LDR      r2,[r4,#0]
+        0x000002e6:    1850        P.      ADDS     r0,r2,r1
+        0x000002e8:    4631        1F      MOV      r1,r6
+        0x000002ea:    f000f8bf    ....    BL       Xil_Out32 ; 0x46c
+;;;164    			((Channel - 1) * XGPIO_CHAN_OFFSET) + XGPIO_TRI_OFFSET,
+;;;165    			DirectionMask);
+;;;166    }
+        0x000002ee:    bf00        ..      NOP      
+        0x000002f0:    e7d0        ..      B        0x294 ; XGpio_SetDataDirection + 32
+    XGpio_GetDataDirection
+;;;167    
+;;;168    /****************************************************************************/
+;;;169    /**
+;;;170    * Get the input/output direction of all discrete signals for the specified
+;;;171    * GPIO channel.
+;;;172    *
+;;;173    * @param	InstancePtr is a pointer to an XGpio instance to be worked on.
+;;;174    * @param	Channel contains the channel of the GPIO (1 or 2) to operate on.
+;;;175    *
+;;;176    * @return	Bitmask specifying which discretes are input and
+;;;177    *		which are output. Bits set to 0 are output and bits set to 1 are
+;;;178    *		input.
+;;;179    *
+;;;180    * @note
+;;;181    *
+;;;182    * The hardware must be built for dual channels if this function is used
+;;;183    * with any channel other than 1.  If it is not, this function will assert.
+;;;184    *
+;;;185    *****************************************************************************/
+;;;186    u32 XGpio_GetDataDirection(XGpio *InstancePtr, unsigned Channel)
+;;;187    {
+        0x000002f2:    b570        p.      PUSH     {r4-r6,lr}
+        0x000002f4:    4604        .F      MOV      r4,r0
+        0x000002f6:    460d        .F      MOV      r5,r1
+;;;188    	Xil_AssertNonvoid(InstancePtr != NULL);
+        0x000002f8:    b11c        ..      CBZ      r4,0x302 ; XGpio_GetDataDirection + 16
+        0x000002fa:    2000        .       MOVS     r0,#0
+        0x000002fc:    495d        ]I      LDR      r1,[pc,#372] ; [0x474] = 0x20000004
+        0x000002fe:    6008        .`      STR      r0,[r1,#0]
+        0x00000300:    e008        ..      B        0x314 ; XGpio_GetDataDirection + 34
+        0x00000302:    21bc        .!      MOVS     r1,#0xbc
+        0x00000304:    485c        \H      LDR      r0,[pc,#368] ; [0x478] = 0x56c
+        0x00000306:    f7ffff55    ..U.    BL       Xil_Assert ; 0x1b4
+        0x0000030a:    2001        .       MOVS     r0,#1
+        0x0000030c:    4959        YI      LDR      r1,[pc,#356] ; [0x474] = 0x20000004
+        0x0000030e:    6008        .`      STR      r0,[r1,#0]
+        0x00000310:    2000        .       MOVS     r0,#0
+        0x00000312:    bd70        p.      POP      {r4-r6,pc}
+;;;189    	Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+        0x00000314:    6860        `h      LDR      r0,[r4,#4]
+        0x00000316:    f1b03f11    ...?    CMP      r0,#0x11111111
+        0x0000031a:    d103        ..      BNE      0x324 ; XGpio_GetDataDirection + 50
+        0x0000031c:    2000        .       MOVS     r0,#0
+        0x0000031e:    4955        UI      LDR      r1,[pc,#340] ; [0x474] = 0x20000004
+        0x00000320:    6008        .`      STR      r0,[r1,#0]
+        0x00000322:    e008        ..      B        0x336 ; XGpio_GetDataDirection + 68
+        0x00000324:    21bd        .!      MOVS     r1,#0xbd
+        0x00000326:    4854        TH      LDR      r0,[pc,#336] ; [0x478] = 0x56c
+        0x00000328:    f7ffff44    ..D.    BL       Xil_Assert ; 0x1b4
+        0x0000032c:    2001        .       MOVS     r0,#1
+        0x0000032e:    4951        QI      LDR      r1,[pc,#324] ; [0x474] = 0x20000004
+        0x00000330:    6008        .`      STR      r0,[r1,#0]
+        0x00000332:    2000        .       MOVS     r0,#0
+        0x00000334:    e7ed        ..      B        0x312 ; XGpio_GetDataDirection + 32
+;;;190    	Xil_AssertNonvoid((Channel == 1)  ||
+        0x00000336:    2d01        .-      CMP      r5,#1
+        0x00000338:    d004        ..      BEQ      0x344 ; XGpio_GetDataDirection + 82
+        0x0000033a:    2d02        .-      CMP      r5,#2
+        0x0000033c:    d106        ..      BNE      0x34c ; XGpio_GetDataDirection + 90
+        0x0000033e:    68e0        .h      LDR      r0,[r4,#0xc]
+        0x00000340:    2801        .(      CMP      r0,#1
+        0x00000342:    d103        ..      BNE      0x34c ; XGpio_GetDataDirection + 90
+        0x00000344:    2000        .       MOVS     r0,#0
+        0x00000346:    494b        KI      LDR      r1,[pc,#300] ; [0x474] = 0x20000004
+        0x00000348:    6008        .`      STR      r0,[r1,#0]
+        0x0000034a:    e008        ..      B        0x35e ; XGpio_GetDataDirection + 108
+        0x0000034c:    21be        .!      MOVS     r1,#0xbe
+        0x0000034e:    484a        JH      LDR      r0,[pc,#296] ; [0x478] = 0x56c
+        0x00000350:    f7ffff30    ..0.    BL       Xil_Assert ; 0x1b4
+        0x00000354:    2001        .       MOVS     r0,#1
+        0x00000356:    4947        GI      LDR      r1,[pc,#284] ; [0x474] = 0x20000004
+        0x00000358:    6008        .`      STR      r0,[r1,#0]
+        0x0000035a:    2000        .       MOVS     r0,#0
+        0x0000035c:    e7d9        ..      B        0x312 ; XGpio_GetDataDirection + 32
+;;;191    		((Channel == 2) &&
+;;;192    		(InstancePtr->IsDual == TRUE)));
+;;;193    
+;;;194    	return XGpio_ReadReg(InstancePtr->BaseAddress,
+        0x0000035e:    1e69        i.      SUBS     r1,r5,#1
+        0x00000360:    2304        .#      MOVS     r3,#4
+        0x00000362:    eb0301c1    ....    ADD      r1,r3,r1,LSL #3
+        0x00000366:    6822        "h      LDR      r2,[r4,#0]
+        0x00000368:    1850        P.      ADDS     r0,r2,r1
+;;; ..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_io.h
+;;;153    	return *(volatile u32 *) Addr;
+        0x0000036a:    6801        .h      LDR      r1,[r0,#0]
+        0x0000036c:    4608        .F      MOV      r0,r1
+        0x0000036e:    e7d0        ..      B        0x312 ; XGpio_GetDataDirection + 32
+    XGpio_DiscreteRead
+;;; ..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio.c
+;;;213    {
+        0x00000370:    b570        p.      PUSH     {r4-r6,lr}
+        0x00000372:    4604        .F      MOV      r4,r0
+        0x00000374:    460d        .F      MOV      r5,r1
+;;;214    	Xil_AssertNonvoid(InstancePtr != NULL);
+        0x00000376:    b11c        ..      CBZ      r4,0x380 ; XGpio_DiscreteRead + 16
+        0x00000378:    2000        .       MOVS     r0,#0
+        0x0000037a:    493e        >I      LDR      r1,[pc,#248] ; [0x474] = 0x20000004
+        0x0000037c:    6008        .`      STR      r0,[r1,#0]
+        0x0000037e:    e008        ..      B        0x392 ; XGpio_DiscreteRead + 34
+        0x00000380:    21d6        .!      MOVS     r1,#0xd6
+        0x00000382:    483d        =H      LDR      r0,[pc,#244] ; [0x478] = 0x56c
+        0x00000384:    f7ffff16    ....    BL       Xil_Assert ; 0x1b4
+        0x00000388:    2001        .       MOVS     r0,#1
+        0x0000038a:    493a        :I      LDR      r1,[pc,#232] ; [0x474] = 0x20000004
+        0x0000038c:    6008        .`      STR      r0,[r1,#0]
+        0x0000038e:    2000        .       MOVS     r0,#0
+        0x00000390:    bd70        p.      POP      {r4-r6,pc}
+;;;215    	Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+        0x00000392:    6860        `h      LDR      r0,[r4,#4]
+        0x00000394:    f1b03f11    ...?    CMP      r0,#0x11111111
+        0x00000398:    d103        ..      BNE      0x3a2 ; XGpio_DiscreteRead + 50
+        0x0000039a:    2000        .       MOVS     r0,#0
+        0x0000039c:    4935        5I      LDR      r1,[pc,#212] ; [0x474] = 0x20000004
+        0x0000039e:    6008        .`      STR      r0,[r1,#0]
+        0x000003a0:    e008        ..      B        0x3b4 ; XGpio_DiscreteRead + 68
+        0x000003a2:    21d7        .!      MOVS     r1,#0xd7
+        0x000003a4:    4834        4H      LDR      r0,[pc,#208] ; [0x478] = 0x56c
+        0x000003a6:    f7ffff05    ....    BL       Xil_Assert ; 0x1b4
+        0x000003aa:    2001        .       MOVS     r0,#1
+        0x000003ac:    4931        1I      LDR      r1,[pc,#196] ; [0x474] = 0x20000004
+        0x000003ae:    6008        .`      STR      r0,[r1,#0]
+        0x000003b0:    2000        .       MOVS     r0,#0
+        0x000003b2:    e7ed        ..      B        0x390 ; XGpio_DiscreteRead + 32
+;;;216    	Xil_AssertNonvoid((Channel == 1) ||
+        0x000003b4:    2d01        .-      CMP      r5,#1
+        0x000003b6:    d004        ..      BEQ      0x3c2 ; XGpio_DiscreteRead + 82
+        0x000003b8:    2d02        .-      CMP      r5,#2
+        0x000003ba:    d106        ..      BNE      0x3ca ; XGpio_DiscreteRead + 90
+        0x000003bc:    68e0        .h      LDR      r0,[r4,#0xc]
+        0x000003be:    2801        .(      CMP      r0,#1
+        0x000003c0:    d103        ..      BNE      0x3ca ; XGpio_DiscreteRead + 90
+        0x000003c2:    2000        .       MOVS     r0,#0
+        0x000003c4:    492b        +I      LDR      r1,[pc,#172] ; [0x474] = 0x20000004
+        0x000003c6:    6008        .`      STR      r0,[r1,#0]
+        0x000003c8:    e008        ..      B        0x3dc ; XGpio_DiscreteRead + 108
+        0x000003ca:    21d8        .!      MOVS     r1,#0xd8
+        0x000003cc:    482a        *H      LDR      r0,[pc,#168] ; [0x478] = 0x56c
+        0x000003ce:    f7fffef1    ....    BL       Xil_Assert ; 0x1b4
+        0x000003d2:    2001        .       MOVS     r0,#1
+        0x000003d4:    4927        'I      LDR      r1,[pc,#156] ; [0x474] = 0x20000004
+        0x000003d6:    6008        .`      STR      r0,[r1,#0]
+        0x000003d8:    2000        .       MOVS     r0,#0
+        0x000003da:    e7d9        ..      B        0x390 ; XGpio_DiscreteRead + 32
+;;;217    			((Channel == 2) && (InstancePtr->IsDual == TRUE)));
+;;;218    
+;;;219    	return XGpio_ReadReg(InstancePtr->BaseAddress,
+        0x000003dc:    1e69        i.      SUBS     r1,r5,#1
+        0x000003de:    2300        .#      MOVS     r3,#0
+        0x000003e0:    eb0301c1    ....    ADD      r1,r3,r1,LSL #3
+        0x000003e4:    6822        "h      LDR      r2,[r4,#0]
+        0x000003e6:    1850        P.      ADDS     r0,r2,r1
+;;; ..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_io.h
+;;;153    	return *(volatile u32 *) Addr;
+        0x000003e8:    6801        .h      LDR      r1,[r0,#0]
+        0x000003ea:    4608        .F      MOV      r0,r1
+        0x000003ec:    e7d0        ..      B        0x390 ; XGpio_DiscreteRead + 32
+    XGpio_DiscreteWrite
+;;; ..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio.c
+;;;241    {
+        0x000003ee:    b570        p.      PUSH     {r4-r6,lr}
+        0x000003f0:    4604        .F      MOV      r4,r0
+        0x000003f2:    460d        .F      MOV      r5,r1
+        0x000003f4:    4616        .F      MOV      r6,r2
+;;;242    	Xil_AssertVoid(InstancePtr != NULL);
+        0x000003f6:    b11c        ..      CBZ      r4,0x400 ; XGpio_DiscreteWrite + 18
+        0x000003f8:    2000        .       MOVS     r0,#0
+        0x000003fa:    491e        .I      LDR      r1,[pc,#120] ; [0x474] = 0x20000004
+        0x000003fc:    6008        .`      STR      r0,[r1,#0]
+        0x000003fe:    e007        ..      B        0x410 ; XGpio_DiscreteWrite + 34
+        0x00000400:    21f2        .!      MOVS     r1,#0xf2
+        0x00000402:    481d        .H      LDR      r0,[pc,#116] ; [0x478] = 0x56c
+        0x00000404:    f7fffed6    ....    BL       Xil_Assert ; 0x1b4
+        0x00000408:    2001        .       MOVS     r0,#1
+        0x0000040a:    491a        .I      LDR      r1,[pc,#104] ; [0x474] = 0x20000004
+        0x0000040c:    6008        .`      STR      r0,[r1,#0]
+        0x0000040e:    bd70        p.      POP      {r4-r6,pc}
+;;;243    	Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+        0x00000410:    6860        `h      LDR      r0,[r4,#4]
+        0x00000412:    f1b03f11    ...?    CMP      r0,#0x11111111
+        0x00000416:    d103        ..      BNE      0x420 ; XGpio_DiscreteWrite + 50
+        0x00000418:    2000        .       MOVS     r0,#0
+        0x0000041a:    4916        .I      LDR      r1,[pc,#88] ; [0x474] = 0x20000004
+        0x0000041c:    6008        .`      STR      r0,[r1,#0]
+        0x0000041e:    e007        ..      B        0x430 ; XGpio_DiscreteWrite + 66
+        0x00000420:    21f3        .!      MOVS     r1,#0xf3
+        0x00000422:    4815        .H      LDR      r0,[pc,#84] ; [0x478] = 0x56c
+        0x00000424:    f7fffec6    ....    BL       Xil_Assert ; 0x1b4
+        0x00000428:    2001        .       MOVS     r0,#1
+        0x0000042a:    4912        .I      LDR      r1,[pc,#72] ; [0x474] = 0x20000004
+        0x0000042c:    6008        .`      STR      r0,[r1,#0]
+        0x0000042e:    e7ee        ..      B        0x40e ; XGpio_DiscreteWrite + 32
+;;;244    	Xil_AssertVoid((Channel == 1) ||
+        0x00000430:    2d01        .-      CMP      r5,#1
+        0x00000432:    d004        ..      BEQ      0x43e ; XGpio_DiscreteWrite + 80
+        0x00000434:    2d02        .-      CMP      r5,#2
+        0x00000436:    d106        ..      BNE      0x446 ; XGpio_DiscreteWrite + 88
+        0x00000438:    68e0        .h      LDR      r0,[r4,#0xc]
+        0x0000043a:    2801        .(      CMP      r0,#1
+        0x0000043c:    d103        ..      BNE      0x446 ; XGpio_DiscreteWrite + 88
+        0x0000043e:    2000        .       MOVS     r0,#0
+        0x00000440:    490c        .I      LDR      r1,[pc,#48] ; [0x474] = 0x20000004
+        0x00000442:    6008        .`      STR      r0,[r1,#0]
+        0x00000444:    e007        ..      B        0x456 ; XGpio_DiscreteWrite + 104
+        0x00000446:    21f4        .!      MOVS     r1,#0xf4
+        0x00000448:    480b        .H      LDR      r0,[pc,#44] ; [0x478] = 0x56c
+        0x0000044a:    f7fffeb3    ....    BL       Xil_Assert ; 0x1b4
+        0x0000044e:    2001        .       MOVS     r0,#1
+        0x00000450:    4908        .I      LDR      r1,[pc,#32] ; [0x474] = 0x20000004
+        0x00000452:    6008        .`      STR      r0,[r1,#0]
+        0x00000454:    e7db        ..      B        0x40e ; XGpio_DiscreteWrite + 32
+;;;245    		     ((Channel == 2) && (InstancePtr->IsDual == TRUE)));
+;;;246    
+;;;247    	XGpio_WriteReg(InstancePtr->BaseAddress,
+        0x00000456:    1e69        i.      SUBS     r1,r5,#1
+        0x00000458:    2300        .#      MOVS     r3,#0
+        0x0000045a:    eb0301c1    ....    ADD      r1,r3,r1,LSL #3
+        0x0000045e:    6822        "h      LDR      r2,[r4,#0]
+        0x00000460:    1850        P.      ADDS     r0,r2,r1
+        0x00000462:    4631        1F      MOV      r1,r6
+        0x00000464:    f000f802    ....    BL       Xil_Out32 ; 0x46c
+;;;248    			((Channel - 1) * XGPIO_CHAN_OFFSET) + XGPIO_DATA_OFFSET,
+;;;249    			Data);
+;;;250    }
+        0x00000468:    bf00        ..      NOP      
+        0x0000046a:    e7d0        ..      B        0x40e ; XGpio_DiscreteWrite + 32
+    Xil_Out32
+;;; ..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_io.h
+;;;226    	volatile u32 *LocalAddr = (volatile u32 *)Addr;
+        0x0000046c:    4602        .F      MOV      r2,r0
+;;;227    	*LocalAddr = Value;
+        0x0000046e:    6011        .`      STR      r1,[r2,#0]
+;;;228    #else
+;;;229    	XStl_RegUpdate(Addr, Value);
+;;;230    #endif
+;;;231    }
+        0x00000470:    4770        pG      BX       lr
+    $d
+        0x00000472:    0000        ..      DCW    0
+        0x00000474:    20000004    ...     DCD    536870916
+        0x00000478:    0000056c    l...    DCD    1388
+    $t
+    .text
+    XGpio_LookupConfig
+;;; ..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio_sinit.c
+;;;92     {
+        0x0000047c:    4602        .F      MOV      r2,r0
+;;;93     	XGpio_Config *CfgPtr = NULL;
+        0x0000047e:    2000        .       MOVS     r0,#0
+;;;94     
+;;;95     	int Index;
+;;;96     
+;;;97     	for (Index = 0; Index < XPAR_XGPIO_NUM_INSTANCES; Index++) {
+        0x00000480:    2100        .!      MOVS     r1,#0
+        0x00000482:    e00a        ..      B        0x49a ; XGpio_LookupConfig + 30
+        0x00000484:    4b17        .K      LDR      r3,[pc,#92] ; [0x4e4] = 0x20000010
+        0x00000486:    eb031301    ....    ADD      r3,r3,r1,LSL #4
+        0x0000048a:    881b        ..      LDRH     r3,[r3,#0]
+        0x0000048c:    4293        .B      CMP      r3,r2
+        0x0000048e:    d103        ..      BNE      0x498 ; XGpio_LookupConfig + 28
+        0x00000490:    4b14        .K      LDR      r3,[pc,#80] ; [0x4e4] = 0x20000010
+        0x00000492:    eb031001    ....    ADD      r0,r3,r1,LSL #4
+        0x00000496:    e002        ..      B        0x49e ; XGpio_LookupConfig + 34
+        0x00000498:    1c49        I.      ADDS     r1,r1,#1
+        0x0000049a:    2901        .)      CMP      r1,#1
+        0x0000049c:    dbf2        ..      BLT      0x484 ; XGpio_LookupConfig + 8
+;;;98     		if (XGpio_ConfigTable[Index].DeviceId == DeviceId) {
+;;;99     			CfgPtr = &XGpio_ConfigTable[Index];
+;;;100    			break;
+        0x0000049e:    bf00        ..      NOP      
+;;;101    		}
+;;;102    	}
+;;;103    
+;;;104    	return CfgPtr;
+;;;105    }
+        0x000004a0:    4770        pG      BX       lr
+    XGpio_Initialize
+;;;106    
+;;;107    
+;;;108    /****************************************************************************/
+;;;109    /**
+;;;110    * Initialize the XGpio instance provided by the caller based on the
+;;;111    * given DeviceID.
+;;;112    *
+;;;113    * Nothing is done except to initialize the InstancePtr.
+;;;114    *
+;;;115    * @param	InstancePtr is a pointer to an XGpio instance. The memory the
+;;;116    *		pointer references must be pre-allocated by the caller. Further
+;;;117    *		calls to manipulate the instance/driver through the XGpio API
+;;;118    *		must be made with this pointer.
+;;;119    * @param	DeviceId is the unique id of the device controlled by this XGpio
+;;;120    *		instance. Passing in a device id associates the generic XGpio
+;;;121    *		instance to a specific device, as chosen by the caller or
+;;;122    *		application developer.
+;;;123    *
+;;;124    * @return
+;;;125    *		- XST_SUCCESS if the initialization was successfull.
+;;;126    * 		- XST_DEVICE_NOT_FOUND  if the device configuration data was not
+;;;127    *		found for a device with the supplied device ID.
+;;;128    *
+;;;129    * @note		None.
+;;;130    *
+;;;131    *****************************************************************************/
+;;;132    int XGpio_Initialize(XGpio * InstancePtr, u16 DeviceId)
+;;;133    {
+        0x000004a2:    b570        p.      PUSH     {r4-r6,lr}
+        0x000004a4:    4605        .F      MOV      r5,r0
+        0x000004a6:    460e        .F      MOV      r6,r1
+;;;134    	XGpio_Config *ConfigPtr;
+;;;135    
+;;;136    	/*
+;;;137    	 * Assert arguments
+;;;138    	 */
+;;;139    	Xil_AssertNonvoid(InstancePtr != NULL);
+        0x000004a8:    b11d        ..      CBZ      r5,0x4b2 ; XGpio_Initialize + 16
+        0x000004aa:    2000        .       MOVS     r0,#0
+        0x000004ac:    490e        .I      LDR      r1,[pc,#56] ; [0x4e8] = 0x20000004
+        0x000004ae:    6008        .`      STR      r0,[r1,#0]
+        0x000004b0:    e008        ..      B        0x4c4 ; XGpio_Initialize + 34
+        0x000004b2:    218b        .!      MOVS     r1,#0x8b
+        0x000004b4:    480d        .H      LDR      r0,[pc,#52] ; [0x4ec] = 0x5b8
+        0x000004b6:    f7fffe7d    ..}.    BL       Xil_Assert ; 0x1b4
+        0x000004ba:    2001        .       MOVS     r0,#1
+        0x000004bc:    490a        .I      LDR      r1,[pc,#40] ; [0x4e8] = 0x20000004
+        0x000004be:    6008        .`      STR      r0,[r1,#0]
+        0x000004c0:    2000        .       MOVS     r0,#0
+        0x000004c2:    bd70        p.      POP      {r4-r6,pc}
+;;;140    
+;;;141    	/*
+;;;142    	 * Lookup configuration data in the device configuration table.
+;;;143    	 * Use this configuration info down below when initializing this
+;;;144    	 * driver.
+;;;145    	 */
+;;;146    	ConfigPtr = XGpio_LookupConfig(DeviceId);
+        0x000004c4:    4630        0F      MOV      r0,r6
+        0x000004c6:    f7ffffd9    ....    BL       XGpio_LookupConfig ; 0x47c
+        0x000004ca:    4604        .F      MOV      r4,r0
+;;;147    	if (ConfigPtr == (XGpio_Config *) NULL) {
+        0x000004cc:    b91c        ..      CBNZ     r4,0x4d6 ; XGpio_Initialize + 52
+;;;148    		InstancePtr->IsReady = 0;
+        0x000004ce:    2000        .       MOVS     r0,#0
+        0x000004d0:    6068        h`      STR      r0,[r5,#4]
+;;;149    		return (XST_DEVICE_NOT_FOUND);
+        0x000004d2:    2002        .       MOVS     r0,#2
+        0x000004d4:    e7f5        ..      B        0x4c2 ; XGpio_Initialize + 32
+;;;150    	}
+;;;151    
+;;;152    	return XGpio_CfgInitialize(InstancePtr, ConfigPtr,
+        0x000004d6:    4621        !F      MOV      r1,r4
+        0x000004d8:    4628        (F      MOV      r0,r5
+        0x000004da:    6862        bh      LDR      r2,[r4,#4]
+        0x000004dc:    f7fffeae    ....    BL       XGpio_CfgInitialize ; 0x23c
+        0x000004e0:    e7ef        ..      B        0x4c2 ; XGpio_Initialize + 32
+    $d
+        0x000004e2:    0000        ..      DCW    0
+        0x000004e4:    20000010    ...     DCD    536870928
+        0x000004e8:    20000004    ...     DCD    536870916
+        0x000004ec:    000005b8    ....    DCD    1464
+    $t
+    .text
+    __use_two_region_memory
+        0x000004f0:    4770        pG      BX       lr
+    __rt_heap_escrow$2region
+        0x000004f2:    4770        pG      BX       lr
+    __rt_heap_expand$2region
+        0x000004f4:    4770        pG      BX       lr
+    .text
+    __user_setup_stackheap
+        0x000004f6:    4675        uF      MOV      r5,lr
+        0x000004f8:    f000f82c    ..,.    BL       __user_libspace ; 0x554
+        0x000004fc:    46ae        .F      MOV      lr,r5
+        0x000004fe:    0005        ..      MOVS     r5,r0
+        0x00000500:    4669        iF      MOV      r1,sp
+        0x00000502:    4653        SF      MOV      r3,r10
+        0x00000504:    f0200007     ...    BIC      r0,r0,#7
+        0x00000508:    4685        .F      MOV      sp,r0
+        0x0000050a:    b018        ..      ADD      sp,sp,#0x60
+        0x0000050c:    b520         .      PUSH     {r5,lr}
+        0x0000050e:    f7fffe3f    ..?.    BL       __user_initial_stackheap ; 0x190
+        0x00000512:    e8bd4020    .. @    POP      {r5,lr}
+        0x00000516:    f04f0600    O...    MOV      r6,#0
+        0x0000051a:    f04f0700    O...    MOV      r7,#0
+        0x0000051e:    f04f0800    O...    MOV      r8,#0
+        0x00000522:    f04f0b00    O...    MOV      r11,#0
+        0x00000526:    f0210107    !...    BIC      r1,r1,#7
+        0x0000052a:    46ac        .F      MOV      r12,r5
+        0x0000052c:    e8ac09c0    ....    STM      r12!,{r6-r8,r11}
+        0x00000530:    e8ac09c0    ....    STM      r12!,{r6-r8,r11}
+        0x00000534:    e8ac09c0    ....    STM      r12!,{r6-r8,r11}
+        0x00000538:    e8ac09c0    ....    STM      r12!,{r6-r8,r11}
+        0x0000053c:    468d        .F      MOV      sp,r1
+        0x0000053e:    4770        pG      BX       lr
+    .text
+    exit
+        0x00000540:    b510        ..      PUSH     {r4,lr}
+        0x00000542:    4604        .F      MOV      r4,r0
+        0x00000544:    f3af8000    ....    NOP.W    
+        0x00000548:    4620         F      MOV      r0,r4
+        0x0000054a:    e8bd4010    ...@    POP      {r4,lr}
+        0x0000054e:    f7ffbdfe    ....    B.W      __rt_exit ; 0x14e
+        0x00000552:    0000        ..      MOVS     r0,r0
+    .text
+    __user_libspace
+    __user_perproc_libspace
+    __user_perthread_libspace
+        0x00000554:    4800        .H      LDR      r0,[pc,#0] ; [0x558] = 0x20000030
+        0x00000556:    4770        pG      BX       lr
+    $d
+        0x00000558:    20000030    0..     DCD    536870960
+    $t
+    .text
+    _sys_exit
+        0x0000055c:    4901        .I      LDR      r1,[pc,#4] ; [0x564] = 0x20026
+        0x0000055e:    2018        .       MOVS     r0,#0x18
+        0x00000560:    beab        ..      BKPT     #0xab
+        0x00000562:    e7fe        ..      B        0x562 ; _sys_exit + 6
+    $d
+        0x00000564:    00020026    &...    DCD    131110
+    $t
+    .text
+    __I$use$semihosting
+    __use_no_semihosting_swi
+        0x00000568:    4770        pG      BX       lr
+    .text
+    __semihosting_library_function
+        0x0000056a:    0000        ..      MOVS     r0,r0
+    $d.realdata
+    .conststring
+        0x0000056c:    735c2e2e    ..\s    DCD    1935420974
+        0x00000570:    775f6b64    dk_w    DCD    2002742116
+        0x00000574:    736b726f    orks    DCD    1936421487
+        0x00000578:    65636170    pace    DCD    1701011824
+        0x0000057c:    6174735c    \sta    DCD    1635021660
+        0x00000580:    6c61646e    ndal    DCD    1818322030
+        0x00000584:    5f656e6f    one_    DCD    1600482927
+        0x00000588:    5f707362    bsp_    DCD    1601205090
+        0x0000058c:    6f435c30    0\Co    DCD    1866685488
+        0x00000590:    78657472    rtex    DCD    2019914866
+        0x00000594:    5f334d5f    _M3_    DCD    1597197663
+        0x00000598:    696c5c30    0\li    DCD    1768709168
+        0x0000059c:    63727362    bsrc    DCD    1668445026
+        0x000005a0:    6970675c    \gpi    DCD    1768974172
+        0x000005a4:    34765f6f    o_v4    DCD    880172911
+        0x000005a8:    735c345f    _4\s    DCD    1935422559
+        0x000005ac:    785c6372    rc\x    DCD    2019320690
+        0x000005b0:    6f697067    gpio    DCD    1869181031
+        0x000005b4:    0000632e    .c..    DCD    25390
+    .conststring
+        0x000005b8:    735c2e2e    ..\s    DCD    1935420974
+        0x000005bc:    775f6b64    dk_w    DCD    2002742116
+        0x000005c0:    736b726f    orks    DCD    1936421487
+        0x000005c4:    65636170    pace    DCD    1701011824
+        0x000005c8:    6174735c    \sta    DCD    1635021660
+        0x000005cc:    6c61646e    ndal    DCD    1818322030
+        0x000005d0:    5f656e6f    one_    DCD    1600482927
+        0x000005d4:    5f707362    bsp_    DCD    1601205090
+        0x000005d8:    6f435c30    0\Co    DCD    1866685488
+        0x000005dc:    78657472    rtex    DCD    2019914866
+        0x000005e0:    5f334d5f    _M3_    DCD    1597197663
+        0x000005e4:    696c5c30    0\li    DCD    1768709168
+        0x000005e8:    63727362    bsrc    DCD    1668445026
+        0x000005ec:    6970675c    \gpi    DCD    1768974172
+        0x000005f0:    34765f6f    o_v4    DCD    880172911
+        0x000005f4:    735c345f    _4\s    DCD    1935422559
+        0x000005f8:    785c6372    rc\x    DCD    2019320690
+        0x000005fc:    6f697067    gpio    DCD    1869181031
+        0x00000600:    6e69735f    _sin    DCD    1852404575
+        0x00000604:    632e7469    it.c    DCD    1663988841
+        0x00000608:    00000000    ....    DCD    0
+    Region$$Table$$Base
+        0x0000060c:    0000062c    ,...    DCD    1580
+        0x00000610:    20000000    ...     DCD    536870912
+        0x00000614:    00000020     ...    DCD    32
+        0x00000618:    000000fc    ....    DCD    252
+        0x0000061c:    0000064c    L...    DCD    1612
+        0x00000620:    20000020     ..     DCD    536870944
+        0x00000624:    00001070    p...    DCD    4208
+        0x00000628:    00000118    ....    DCD    280
+    Region$$Table$$Limit
+
+** Section #2 'RW_IRAM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 32 bytes (alignment 4)
+    Address: 0x20000000
+
+
+** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 4208 bytes (alignment 8)
+    Address: 0x20000020
+
+
+** Section #4 '.debug_abbrev' (SHT_PROGBITS)
+    Size   : 1476 bytes
+
+
+** Section #5 '.debug_frame' (SHT_PROGBITS)
+    Size   : 1184 bytes
+
+
+** Section #6 '.debug_info' (SHT_PROGBITS)
+    Size   : 10216 bytes
+
+
+** Section #7 '.debug_line' (SHT_PROGBITS)
+    Size   : 3680 bytes
+
+
+** Section #8 '.debug_loc' (SHT_PROGBITS)
+    Size   : 1220 bytes
+
+
+** Section #9 '.debug_macinfo' (SHT_PROGBITS)
+    Size   : 4228 bytes
+
+
+** Section #10 '.debug_pubnames' (SHT_PROGBITS)
+    Size   : 550 bytes
+
+
+** Section #11 '.symtab' (SHT_SYMTAB)
+    Size   : 4752 bytes (alignment 4)
+    String table #12 '.strtab'
+    Last local symbol no. 164
+
+
+** Section #12 '.strtab' (SHT_STRTAB)
+    Size   : 5400 bytes
+
+
+** Section #13 '.note' (SHT_NOTE)
+    Size   : 28 bytes (alignment 4)
+
+
+** Section #14 '.comment' (SHT_PROGBITS)
+    Size   : 12048 bytes
+
+
+** Section #15 '.shstrtab' (SHT_STRTAB)
+    Size   : 156 bytes
+
+
