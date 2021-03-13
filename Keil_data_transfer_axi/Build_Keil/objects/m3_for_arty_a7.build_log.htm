@@ -1,0 +1,116 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Matteo Cattaneo, Politecnico di Milano, LIC=BL2X6-XF18B-ZZYQD-RJQMI-5HIEK-FI8BD
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.33.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+C:\ES1_Project\myTestbench_project\software\m3_for_arty_a7\Build_Keil\m3_for_arty_a7.uvprojx
+Project File Date:  03/11/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'm3_for_arty_a7'
+assembling atomic_asm.s...
+compiling atomic.c...
+compiling outbyte.c...
+assembling startup_ARTY_CM3.s...
+compiling print.c...
+compiling xil_assert.c...
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\standalone_v6_7\src\xil_assert.h(195): warning:  #1-D: last line of file ends without a newline
+  */
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\standalone_v6_7\src\xil_assert.c: 1 warning, 0 errors
+compiling system_ARTY_CM3.c...
+compiling xgpio_extra.c...
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_assert.h(195): warning:  #1-D: last line of file ends without a newline
+  */
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio_extra.c: 1 warning, 0 errors
+compiling xgpio.c...
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_assert.h(195): warning:  #1-D: last line of file ends without a newline
+  */
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio.c: 1 warning, 0 errors
+compiling main.c...
+compiling xgpio_g.c...
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_assert.h(195): warning:  #1-D: last line of file ends without a newline
+  */
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio_g.c: 1 warning, 0 errors
+compiling xgpio_intr.c...
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_assert.h(195): warning:  #1-D: last line of file ends without a newline
+  */
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio_intr.c: 1 warning, 0 errors
+compiling xgpio_sinit.c...
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_assert.h(195): warning:  #1-D: last line of file ends without a newline
+  */
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio_sinit.c: 1 warning, 0 errors
+compiling xgpio_selftest.c...
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_assert.h(195): warning:  #1-D: last line of file ends without a newline
+  */
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\libsrc\gpio_v4_4\src\xgpio_selftest.c: 1 warning, 0 errors
+compiling gpio.c...
+..\sdk_workspace\standalone_bsp_0\Cortex_M3_0\include\xil_assert.h(195): warning:  #1-D: last line of file ends without a newline
+  */
+..\gpio\gpio.c: 1 warning, 0 errors
+linking...
+Program Size: Code=2596 RO-data=496 RW-data=32 ZI-data=4240  
+FromELF: creating hex file...
+.\objects\m3_for_arty_a7.hex: Warning: Q9931W: Your license for feature Keil will expire in 24 days
+Finished: 0 information, 1 warning and 0 error messages.
+After Build - User command #1: make_hex_a7.bat
+C:\ES1_Project\myTestbench_project\software\m3_for_arty_a7\Build_Keil>call fromelf --vhx --32x1 --output bram_a7.hex objects\m3_for_arty_a7.axf 
+Warning: Q9931W: Your license for feature Keil will expire in 24 days
+Finished: 0 information, 1 warning and 0 error messages.
+C:\ES1_Project\myTestbench_project\software\m3_for_arty_a7\Build_Keil>copy  objects\m3_for_arty_a7.axf bram_a7.elf 
+        1 file copiati.
+C:\ES1_Project\myTestbench_project\software\m3_for_arty_a7\Build_Keil>call fromelf --vhx --8x1  --output qspi_a7.hex objects\m3_for_arty_a7.axf 
+Warning: Q9931W: Your license for feature Keil will expire in 24 days
+Finished: 0 information, 1 warning and 0 error messages.
+C:\ES1_Project\myTestbench_project\software\m3_for_arty_a7\Build_Keil>call fromelf --bin        --output qspi_a7.bin objects\m3_for_arty_a7.axf 
+Warning: Q9931W: Your license for feature Keil will expire in 24 days
+Finished: 0 information, 1 warning and 0 error messages.
+C:\ES1_Project\myTestbench_project\software\m3_for_arty_a7\Build_Keil>copy bram_a7.* ..\..\..\hardware\m3_for_arty_a7\m3_for_arty_a7 
+bram_a7.elf
+bram_a7.hex
+        2 file copiati.
+C:\ES1_Project\myTestbench_project\software\m3_for_arty_a7\Build_Keil>copy qspi_a7.hex ..\..\..\hardware\m3_for_arty_a7\testbench 
+        1 file copiati.
+After Build - User command #2: fromelf C:\ES1_Project\myTestbench_project\software\m3_for_arty_a7\Build_Keil\Objects\m3_for_arty_a7.axf --disassemble --interleave=source  --text -c --output=outfile.lst
+Warning: Q9931W: Your license for feature Keil will expire in 24 days
+Finished: 0 information, 1 warning and 0 error messages.
+".\objects\m3_for_arty_a7.axf" - 0 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_m3_for_arty_a7
+  C:\Users\matte\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\matte\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\Device\ARM\ARMCM3\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
