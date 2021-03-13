@@ -39,10 +39,10 @@ int main (void)
     // Initialise the GPIO
     InitialiseGPIO();
 
-    // Main loop.  Handle LEDs and switches via interrupt
+    // Main loop
     while ( 1 )
     {
-        blink();
+        blink(); // led blinking
     }
 }
 
