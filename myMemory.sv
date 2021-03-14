@@ -1,148 +1,133 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 06.03.2021 18:33:38
-// Design Name: 
-// Module Name: myMemory
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
-module myMemory
-(
-    input  wire                   clk,
-    input  wire                   rstn,
+module myMemory #(
+    parameter MEM_DEPTH = 8*1024,
+    parameter LOG2_MEM_DEPTH = 13,
+    parameter MEM_WIDTH = 32,
+    parameter VMEM_FILE = "/home/chiara/Documenti/vivadoData/2019.1/project_fakemem_tbimpl2/bram_a7.hex"
+) (
+    input  wire                               clk,
+    input  wire                               rstn,
     
-    input wire [13-1:0]           s_axi_awaddr,
-    input wire [2:0]              s_axi_awprot,
-    output wire                   s_axi_awready,
-    input wire                    s_axi_awvalid,
-    input wire                    s_axi_bready,
-    output wire [1:0]              s_axi_bresp,
-    output wire                   s_axi_bvalid,
-    input wire [32-1:0]           s_axi_wdata,
-    output wire                   s_axi_wready,
-
-    input wire                    s_axi_wvalid,   
-    input  wire [13-1:0]  		  s_axi_araddr,
-    input  wire [2:0]             s_axi_arprot,
-    input  wire                   s_axi_arvalid,
-    output wire                   s_axi_arready,
-    input  wire [3:0]             s_axi_wstrb,
-    output reg  [32-1:0]  	      s_axi_rdata,
-    output wire [1:0]             s_axi_rresp,
-    output wire                   s_axi_rvalid,
-    input  wire                   s_axi_rready
+    
+    // Write AXI4-LITE Port
+    input  wire [LOG2_MEM_DEPTH-1:0]          s_axi_awaddr,
+    output wire                               s_axi_awready,
+    input  wire                               s_axi_awvalid,
+    input  wire                               s_axi_bready,
+    output wire [1:0]                         s_axi_bresp,
+    output wire                               s_axi_bvalid,
+    input  wire [MEM_WIDTH-1:0]               s_axi_wdata,
+    output wire                               s_axi_wready,
+    input  wire                               s_axi_wvalid,
+    input  wire [2:0]                         s_axi_awprot,   
+    input  wire [3:0]                         s_axi_wstrb,
+    
+    
+    // Read AXI4-LITE Port
+    input  wire                               s_axi_arvalid,
+    output wire                               s_axi_arready,
+    input  wire [LOG2_MEM_DEPTH-1:0]  		  s_axi_araddr,
+    input  wire [2:0]                         s_axi_arprot,    
+    output wire [1:0]                         s_axi_rresp,
+    output reg  [MEM_WIDTH-1:0]  	          s_axi_rdata,
+    output wire                               s_axi_rvalid,
+    input  wire                               s_axi_rready
 );
 
-     
-    localparam IDLE = 0, WAIT_ARVALID = 1, SEND_DATA = 2, WAIT_AWVALID = 3, WAIT_VALID_DATA = 4, WAIT_RESP = 5;
-    localparam MEM_NUM_LINE= 8*1024;
-    parameter VMEM_FILE = "/home/chiara/Documenti/vivadoData/2019.1/project_fakemem_tbimpl/bram_a7.hex";
+    // Read FSM states definition
+    localparam IDLE_R = 2'b00, WAIT_ARVALID = 2'b01, SEND_DATA = 2'b10;
+    // Write FSM states definition
+    localparam IDLE_W = 2'b00, WAIT_AWVALID = 2'b01, WAIT_VALID_DATA = 2'b10, WAIT_WRESP_READY = 2'b11;
+    
     reg [2:0] state_read_port;
     reg [2:0] state_write_port;
+    // Memory structure
+    reg [MEM_WIDTH-1:0] memTb [0:MEM_DEPTH-1];
 
-    /*(* ram_style = "distributed" *)*/  reg [31:0]  memTb   [0:MEM_NUM_LINE-1];
-    wire reset;
-
-    
-	initial
-    begin
-        $readmemh(VMEM_FILE, memTb);
-    end
-    //load the memory with readmemh
-
-    assign reset = ~rstn;   
-    //dataflow assignments 
+    // Dataflow assignments for Read Port
 	assign s_axi_arready = (state_read_port == WAIT_ARVALID) ? 1 : 0;
 	assign s_axi_rvalid  = (state_read_port == SEND_DATA) ? 1 : 0;
 	assign s_axi_rresp   = 2'b00;
 
-    assign s_axi_awready = (state_write_port == WAIT_AWVALID) ? 1 : 0;
-    assign s_axi_wready  =  (state_write_port == WAIT_VALID_DATA) ? 1 : 0;
-    assign s_axi_bvalid  =  (state_write_port == WAIT_RESP) ? 1 : 0;
-    assign s_axi_bresp = 2'b00;
-    //assign s_axi_rdata = memTb[s_axi_araddr>>2]; 
-
-	//--------------------
     
-
-     
-    always @(posedge clk, posedge reset) begin
-        if (reset)
-            state_read_port <= IDLE;
+    // Dataflow assignments for Write Port
+    assign s_axi_awready = (state_write_port == WAIT_AWVALID) ? 1 : 0;
+    assign s_axi_wready  = (state_write_port == WAIT_VALID_DATA) ? 1 : 0;
+    assign s_axi_bvalid  = (state_write_port == WAIT_WRESP_READY) ? 1 : 0;
+    assign s_axi_bresp   = 2'b00;
+    
+  
+    // Read FSM
+    always @(posedge clk, negedge rstn) begin
+        if (~rstn) begin   
+            $readmemh(VMEM_FILE, memTb); // Load the memory with VMEM_FILE file
+            state_read_port <= IDLE_R;
+        end
         else 
             case (state_read_port) 
-                IDLE : begin
+                IDLE_R : begin 
                     state_read_port <= WAIT_ARVALID;
                 end
                 
-    			WAIT_ARVALID: begin
-
-    				state_read_port <= WAIT_ARVALID;
-    				if (s_axi_arvalid) begin
+    			WAIT_ARVALID: begin 
+    				//state_read_port <= WAIT_ARVALID;
+    				if (s_axi_arvalid) begin // If valid read address is on the bus
     					state_read_port <= SEND_DATA;  
-    					s_axi_rdata <= memTb[s_axi_araddr>>2];  					
+    					s_axi_rdata <= memTb[s_axi_araddr>>2]; // Put requested data on the bus	from memory				
                     end    
                 end
                 
     			SEND_DATA: begin
-    				state_read_port <= SEND_DATA;
-
-    				if(s_axi_rready)
-    					state_read_port <= WAIT_ARVALID;
+    				//state_read_port <= SEND_DATA;
+    				if(s_axi_rready) // If handshake happened
+    					state_read_port <= WAIT_ARVALID; // Wait for new read requests
     			end
     			
     			default:  
-    			    state_read_port <= IDLE; 
+    			    state_read_port <= IDLE_R; 
 
     		endcase
-     end 
+    end 
 
-   /* always @(posedge clk, posedge reset) begin
+    /*
+    // Write FSM 
+    always @(posedge clk, posedge reset) begin
         if (reset)
-            state_write_port <= IDLE;
+            state_write_port <= IDLE_W;
         else 
             case (state_write_port)
-                IDLE : begin
+                IDLE_W : begin
                     state_write_port <= WAIT_AWVALID;
                 end
 
                 WAIT_AWVALID : begin
-                    if (s_axi_awvalid) begin
-                        state_write_port <= WAIT_VALID_DATA;
+                    state_write_port <= WAIT_AWVALID;
+                    if (s_axi_awvalid) begin // If valid write address is on the bus
+                        state_write_port <= WAIT_VALID_DATA; // wait now for valid data
                     end
                 end
 
                 WAIT_VALID_DATA : begin
-                    if (s_axi_wvalid) begin
-                        memTb[s_axi_awaddr>>2] <= s_axi_wdata;
-             
-                        state_write_port <= WAIT_RESP;
+                    state_write_port <= WAIT_VALID_DATA;
+                    if (s_axi_wvalid) begin // If valid data to be writted arrived
+                        memTb[s_axi_awaddr>>2] <= s_axi_wdata; // Put them into memory
+                        state_write_port <= WAIT_WRESP_READY; // Wait for wresp_ready to be set
                     end
                 end
 
-                WAIT_RESP : begin
-                    if (s_axi_bready) begin
-                        state_write_port <= WAIT_AWVALID;
+                WAIT_WRESP_READY : begin
+                    state_write_port <= WAIT_WRESP_READY;
+                    if (s_axi_bready) begin // If wresp handshake has arrived
+                        state_write_port <= WAIT_AWVALID; // Wait for new write requests
                     end
                 end
                 
                 default:  
-    			    state_write_port <= IDLE; 
+    			    state_write_port <= IDLE_W; 
 
         endcase
-     end*/
+    end
+    */
 endmodule
