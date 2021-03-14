@@ -33,7 +33,7 @@ module testbench_v0 ();
     begin
     	clk_sys <= 1'b0;
         reset   = 1'b0; // Active-low reset
-        repeat (1000) @(posedge clk_sys) begin end; // Wait 1000 clock cycles 
+        repeat (1000) @(posedge clk_sys) begin end; // Wait 1000 clock cycles to allow the processor to complete reset
         reset   <= 1'b1;
     end
     
