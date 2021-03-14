@@ -91,7 +91,7 @@ module myMemory #(
             endcase
     end 
 
-    /*
+    
     // Write FSM 
     always @(posedge clk, negedge rstn) begin
         if (rstn)
@@ -129,5 +129,5 @@ module myMemory #(
 
         endcase
     end
-    */
+    
 endmodule
