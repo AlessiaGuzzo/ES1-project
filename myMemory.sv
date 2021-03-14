@@ -43,8 +43,8 @@ module myMemory #(
     
     reg [2:0] state_read_port;
     reg [2:0] state_write_port;
-    // Memory structure
-    reg [MEM_WIDTH-1:0] memTb [0:MEM_DEPTH-1];
+    // Memory structure, which is implemented in LUTs
+    (* ram_style = "distributed" *) reg [MEM_WIDTH-1:0] memTb [0:MEM_DEPTH-1];
 
     // Dataflow assignments for Read Port
 	assign s_axi_arready = (state_read_port == WAIT_ARVALID) ? 1 : 0;
