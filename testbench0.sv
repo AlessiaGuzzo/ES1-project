@@ -22,7 +22,7 @@
 
 module testbench_v0 ();
 
-    localparam CLK_PERIOD_SYS  = 10;
+    localparam CLK_PERIOD_SYS  = 10; // Clocking period is 10 ns (100 MHz)
     
     wire  [3:0] led_4bits_tri_o;
     reg         clk_sys, reset;
