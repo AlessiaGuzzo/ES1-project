@@ -28,10 +28,10 @@ module myMemory #(
     // Read AXI4-LITE Port
     input  wire                               s_axi_arvalid,
     output wire                               s_axi_arready,
-    input  wire [LOG2_MEM_DEPTH-1:0]  		  s_axi_araddr,
+    input  wire [LOG2_MEM_DEPTH-1:0]          s_axi_araddr,
     input  wire [2:0]                         s_axi_arprot,    
     output wire [1:0]                         s_axi_rresp,
-    output reg  [MEM_WIDTH-1:0]  	          s_axi_rdata,
+    output reg  [MEM_WIDTH-1:0]               s_axi_rdata,
     output wire                               s_axi_rvalid,
     input  wire                               s_axi_rready
 );
@@ -47,9 +47,9 @@ module myMemory #(
     (* ram_style = "distributed" *) reg [MEM_WIDTH-1:0] memTb [0:MEM_DEPTH-1];
 
     // Dataflow assignments for Read Port
-	assign s_axi_arready = (state_read_port == WAIT_ARVALID) ? 1 : 0;
-	assign s_axi_rvalid  = (state_read_port == SEND_DATA) ? 1 : 0;
-	assign s_axi_rresp   = 2'b00;
+    assign s_axi_arready = (state_read_port == WAIT_ARVALID) ? 1 : 0;
+    assign s_axi_rvalid  = (state_read_port == SEND_DATA) ? 1 : 0;
+    assign s_axi_rresp   = 2'b00;
 
     
     // Dataflow assignments for Write Port
@@ -71,24 +71,24 @@ module myMemory #(
                     state_read_port <= WAIT_ARVALID;
                 end
                 
-    			WAIT_ARVALID: begin 
-    				//state_read_port <= WAIT_ARVALID;
-    				if (s_axi_arvalid) begin // If valid read address is on the bus
-    					state_read_port <= SEND_DATA;  
-    					s_axi_rdata <= memTb[s_axi_araddr>>2]; // Put requested data on the bus	from memory				
+                WAIT_ARVALID: begin 
+                    //state_read_port <= WAIT_ARVALID;
+                    if (s_axi_arvalid) begin // If valid read address is on the bus
+                        state_read_port <= SEND_DATA;  
+                        s_axi_rdata <= memTb[s_axi_araddr>>2]; // Put requested data on the bus from memory             
                     end    
                 end
                 
-    			SEND_DATA: begin
-    				//state_read_port <= SEND_DATA;
-    				if(s_axi_rready) // If handshake happened
-    					state_read_port <= WAIT_ARVALID; // Wait for new read requests
-    			end
-    			
-    			default:  
-    			    state_read_port <= IDLE_R; 
+                SEND_DATA: begin
+                    //state_read_port <= SEND_DATA;
+                    if(s_axi_rready) // If handshake happened
+                        state_read_port <= WAIT_ARVALID; // Wait for new read requests
+                end
+                
+                default:  
+                    state_read_port <= IDLE_R; 
 
-    		endcase
+            endcase
     end 
 
     /*
@@ -125,7 +125,7 @@ module myMemory #(
                 end
                 
                 default:  
-    			    state_write_port <= IDLE_W; 
+                    state_write_port <= IDLE_W; 
 
         endcase
     end
