@@ -93,8 +93,8 @@ module myMemory #(
 
     /*
     // Write FSM 
-    always @(posedge clk, posedge reset) begin
-        if (reset)
+    always @(posedge clk, negedge rstn) begin
+        if (rstn)
             state_write_port <= IDLE_W;
         else 
             case (state_write_port)
