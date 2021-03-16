@@ -72,7 +72,6 @@ module myMemory #(
                 end
                 
                 WAIT_ARVALID: begin 
-                    //state_read_port <= WAIT_ARVALID;
                     if (s_axi_arvalid) begin // If valid read address is on the bus
                         state_read_port <= SEND_DATA;  
                         s_axi_rdata <= memTb[s_axi_araddr>>2]; // Put requested data on the bus from memory             
@@ -80,7 +79,6 @@ module myMemory #(
                 end
                 
                 SEND_DATA: begin
-                    //state_read_port <= SEND_DATA;
                     if(s_axi_rready) // If handshake happened
                         state_read_port <= WAIT_ARVALID; // Wait for new read requests
                 end
@@ -103,14 +101,12 @@ module myMemory #(
                 end
 
                 WAIT_AWVALID : begin
-                    state_write_port <= WAIT_AWVALID;
                     if (s_axi_awvalid) begin // If valid write address is on the bus
                         state_write_port <= WAIT_VALID_DATA; // wait now for valid data
                     end
                 end
 
                 WAIT_VALID_DATA : begin
-                    state_write_port <= WAIT_VALID_DATA;
                     if (s_axi_wvalid) begin // If valid data to be writted arrived
                         memTb[s_axi_awaddr>>2] <= s_axi_wdata; // Put them into memory
                         state_write_port <= WAIT_WRESP_READY; // Wait for wresp_ready to be set
@@ -118,7 +114,6 @@ module myMemory #(
                 end
 
                 WAIT_WRESP_READY : begin
-                    state_write_port <= WAIT_WRESP_READY;
                     if (s_axi_bready) begin // If wresp handshake has arrived
                         state_write_port <= WAIT_AWVALID; // Wait for new write requests
                     end
